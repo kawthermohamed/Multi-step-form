@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="App-form">
+      <div class="container">
+        <div class="app">
+          <!-- Sidebar start -->
+
+          <div class="side-bar">
+            <div class="side-indicators">
+              <ul>
+                <li>
+                  <div class="no active" data-step="1">1</div>
+                  <div class="tex">
+                    <div class="st-no">Step1</div>
+                    <div class="st-name">Your info</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="no" data-step="2">2</div>
+                  <div class="tex">
+                    <div class="st-no">Step2</div>
+                    <div class="st-name">Select plan</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="no" data-step="3">3</div>
+                  <div class="tex">
+                    <div class="st-no">Step3</div>
+                    <div class="st-name">Add-ons</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="no" data-step="4">4</div>
+                  <div class="tex">
+                    <div class="st-no">Step4</div>
+                    <div class="st-name">Summary</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-form">
+            <div class="steps">
+              <div class="step active" data-level="1">
+                <h1 class="p-title">Personal info</h1>
+                <p class="page-req">
+                  Please provide your name, email address, and phone number.
+                </p>
+                <div class="Req">
+                  <div class="name">
+                    <div class="labels">
+                      <label for="name">Name</label>
+                      <div class="warning">Enter Your Name</div>
+                    </div>
+                    <input
+                      type="text"
+                      id="name"
+                      placeholder="e.g. Stephen King"
+                    />
+                  </div>
+                  <div class="email">
+                    <div class="labels">
+                      <label for="email">Email Address</label>
+                      <div class="warning">Enter Your Email</div>
+                    </div>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="e.g. StephenKing@lorem.com"
+                    />
+                  </div>
+                  <div class="phone">
+                    <div class="labels">
+                      <label for="phone">Phone Number</label>
+                      <div class="warning">Enter Your phone</div>
+                    </div>
+                    <input
+                      type="number"
+                      id="phone"
+                      placeholder="e.g. +1 234 567 890 "
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="step" data-level="2">
+                <h1 class="p-title">Select your plan</h1>
+                <p class="page-req">
+                  You have the option of monthly or yearly billing.
+                </p>
+                <div class="Req">
+                  <div class="plans">
+                    <div
+                      class="plan"
+                      data-name="Arcade"
+                      data-price="$9/mo"
+                      data-yprice="+$108/year"
+                    >
+                      <img src="/assets/images/icon-arcade.svg" alt="" />
+                      <div class="info">
+                        <div class="plan-name">Arcade</div>
+                        <div class="price">&dollar;9/mo</div>
+                      </div>
+                    </div>
+                    <div
+                      class="plan"
+                      data-name="Advance"
+                      data-price="$12/mo"
+                      data-yprice="+$144/year"
+                    >
+                      <img src="/assets/images/icon-advanced.svg" alt="" />
+                      <div class="info">
+                        <div class="plan-name">Advance</div>
+                        <div class="price">&dollar;12/mo</div>
+                      </div>
+                    </div>
+                    <div
+                      class="plan"
+                      data-name="Pro"
+                      data-price="$15/mo"
+                      data-yprice="+$135/year"
+                    >
+                      <img src="/assets/images/icon-pro.svg" alt="" />
+                      <div class="info">
+                        <div class="plan-name">Pro</div>
+                        <div class="price">&dollar;15/mo</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="plan-time">
+                    <span class="mo select">Monthly</span>
+                    <div class="toggle"><span></span></div>
+                    <span class="ye">Yearly</span>
+                  </div>
+                </div>
+              </div>
+              <div class="step" data-level="3">
+                <h1 class="p-title">Pick add-ons</h1>
+                <p class="page-req">
+                  Add-ons help enhance your gaming experience.
+                </p>
+                <div class="services">
+                  <div
+                    class="serv-box"
+                    data-option="Online service"
+                    data-price="1"
+                    data-yprice="12"
+                  >
+                    <div class="serv-chk">
+                      <!-- <input type="checkbox" name="" id="" /> -->
+                      <span class="chk"></span>
+                      <img src="assets/images/icon-checkmark.svg" alt="" />
+                    </div>
+
+                    <div class="serv">
+                      <span>Online service</span>
+                      <span>Access to multiplayer games</span>
+                    </div>
+                    <div class="serv-price">+$1/mo</div>
+                  </div>
+                  <div
+                    class="serv-box"
+                    data-option="Larger storage"
+                    data-price="2"
+                    data-yprice="24"
+                  >
+                    <div class="serv-chk">
+                      <!-- <input type="checkbox" name="" id="" /> -->
+                      <span class="chk"></span>
+                      <img src="assets/images/icon-checkmark.svg" alt="" />
+                    </div>
+                    <div class="serv">
+                      <span>Larger storage</span>
+                      <span>Extra 1TB of cloud save</span>
+                    </div>
+                    <div class="serv-price">+$2/mo</div>
+                  </div>
+                  <div
+                    class="serv-box"
+                    data-option="Customizable Profile"
+                    data-price="2"
+                    data-yprice="24"
+                  >
+                    <div class="serv-chk">
+                      <!-- <input type="checkbox" name="" id="" /> -->
+                      <span class="chk"></span>
+                      <img src="assets/images/icon-checkmark.svg" alt="" />
+                    </div>
+                    <div class="serv">
+                      <span>Customizable Profile</span>
+                      <span>Custom theme on your profile</span>
+                    </div>
+                    <div class="serv-price">+$2/mo</div>
+                  </div>
+                </div>
+              </div>
+              <div class="step" data-level="4">
+                <h1 class="p-title">Finishing up</h1>
+                <p class="page-req">
+                  Double-check everything looks OK before confirming.
+                </p>
+                <div class="summary">
+                  <div class="chosen-plan">
+                    <div class="sel-plan">
+                      <span class="ch-plan"></span>
+                      <span class="ch-addon"></span>
+                    </div>
+                    <div class="ch-price"></div>
+                  </div>
+                  <button class="change-plan">Change</button>
+                  <div class="cus-p">
+                    <!-- <span class="cus-plan"></span>
+                    <span class="cus-price"></span> -->
+                  </div>
+                </div>
+                <div class="total">
+                  <div class="tot-plan">
+                    <span class="tot-plan">Total</span>
+                    <span class="tot-addon">(per month)</span>
+                  </div>
+                  <div class="tot-price">$14/mo</div>
+                </div>
+              </div>
+              <div class="step thanks" data-level="5">
+                <img src="assets/images/icon-thank-you.svg" alt="" />
+                <h2>Thank you!</h2>
+                <p>
+                  Thanks for confirming your subscription! We hope you have fun
+                  using our platform. If you ever need support, please feel free
+                  to email us at support@loremgaming.com.
+                </p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="back">Go Back</button>
+
+              <button class="next">Next step</button>
+              <button class="confirm disable">confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
